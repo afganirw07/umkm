@@ -27,7 +27,11 @@ export function NavbarUser() {
       link: "#features",
     },
     {
-      name: "Cari UMKM",
+      name: "Tentang Kami",
+      link: "#pricing",
+    },
+    {
+      name: "Jelajah",
       link: "#pricing",
     },
 
@@ -37,7 +41,7 @@ export function NavbarUser() {
 
 
   return (
-    <div className="relative w-full">
+    <div className="sticky w-full">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
