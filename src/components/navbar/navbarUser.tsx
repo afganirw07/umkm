@@ -16,7 +16,7 @@ import { useState } from "react";
   const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter", // opsional: untuk CSS variable
+  variable: "--font-inter", 
 });
 
 
@@ -24,15 +24,15 @@ export function NavbarUser() {
   const navItems = [
     {
       name: "Beranda",
-      link: "#features",
+      link: "#beranda",
     },
     {
       name: "Tentang Kami",
-      link: "#pricing",
+      link: "#tentang",
     },
     {
       name: "Jelajah",
-      link: "#pricing",
+      link: "#jelajah",
     },
 
   ];
@@ -49,7 +49,7 @@ export function NavbarUser() {
           <NavItems items={navItems} />
           <div className={`flex items-center gap-4 ${inter.className}`}>
             <NavbarButton className="bg-gray-200" variant="secondary">Masuk</NavbarButton>
-            <NavbarButton className="bg-blue-800 text-white" variant="primary">Daftar jadi penjual</NavbarButton>
+            <NavbarButton className="bg-blue-800 text-white" variant="primary">Daftar</NavbarButton>
           </div>
         </NavBody>
 

@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   html {
     font-family: 'DM Sans', sans-serif !important;
@@ -13,6 +17,7 @@
   }
   .theme {
     --animate-grid: grid 15s linear infinite;
+    --animate-ripple: ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite;
   }
   :root {
     --background: 0 0% 100%;
@@ -118,4 +123,29 @@ input:checked.defaultCheckbox::before {
     transform: translateY(0);
     }
   }
+
+  
+  @keyframes ripple {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+  50% {
+    transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
 }
+
+@keyframes grid {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 var(--cell-size);
+  }
+}
+
+.animate-grid {
+  animation: grid 1s linear infinite;
+}
+
+/* Ripple Animation */
